@@ -8,6 +8,7 @@
 # Copyrights (C) 2018. All Rights Reserved.
 
 import nltk
+from indicnlp.tokenize import indic_tokenize
 import numpy as np
 import os
 import torch
@@ -20,7 +21,7 @@ def get_tokenlized(file):
     tokenlized = list()
     with open(file) as raw:
         for text in raw:
-            text = nltk.word_tokenize(text.lower())
+            text = indic_tokenize.trivial_tokenize(text)
             tokenlized.append(text)
     return tokenlized
 

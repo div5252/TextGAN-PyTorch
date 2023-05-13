@@ -44,9 +44,9 @@ inter_epoch = 10
 tips = 'LeakGAN experiments'
 
 # ===Oracle  or Real===
-if_real_data = [int(False), int(True), int(True)]
-dataset = ['oracle', 'image_coco', 'emnlp_news']
-vocab_size = [5000, 0, 0]
+if_real_data = [int(False), int(True), int(True), int(True)]
+dataset = ['oracle', 'image_coco', 'emnlp_news', 'bbc_lines']
+vocab_size = [5000, 0, 0, 0]
 
 # ===Basic Param===
 data_shuffle = int(False)
@@ -54,7 +54,7 @@ model_type = 'vanilla'
 gen_init = 'normal'
 dis_init = 'uniform'
 samples_num = 10000
-batch_size = 64
+batch_size = 16
 max_seq_len = 20
 gen_lr = 0.0015
 dis_lr = 5e-5
